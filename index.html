@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Yapılacaklar Listesi</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Yapılacaklar Listesi</h1>
+        <div>
+            <input type="text" id="task-input" placeholder="Yeni bir görev ekleyin...">
+            <select id="priority">
+                <option value="low">Düşük</option>
+                <option value="medium">Orta</option>
+                <option value="high">Yüksek</option>
+            </select>
+            <button onclick="addTask()">Görev Ekle</button>
+        </div>
+        <div id="filter-container">
+            <label>Göster:</label>
+            <select id="filter" onchange="filterTasks()">
+                <option value="all">Hepsi</option>
+                <option value="active">Aktif</option>
+                <option value="completed">Tamamlananlar</option>
+            </select>
+        </div>
+        <div id="search-container">
+            <input type="text" id="search" oninput="searchTasks()" placeholder="Görevleri Ara...">
+        </div>
+        <ul id="task-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
